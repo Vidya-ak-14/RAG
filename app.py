@@ -14,8 +14,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 api_key = os.getenv('GOOGLE_API_KEY')
-if not api_key:
-    raise ValueError("Google API key is not set in environment variables.")
+
 genai.configure(api_key=api_key)
 
 def get_pdf_text(pdf_docs):
